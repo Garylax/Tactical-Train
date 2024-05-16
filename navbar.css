@@ -1,7 +1,13 @@
 header {
+    /* fix the header in the top of the page */
+    position: fixed;
+    width: 100vw;
+
     border-bottom: 1px solid var(--border-color);
+    background-color: white;
 }
 
+/* separation of header and content due to "max-width" property (in global.css) on content only */
 #content-header {
     padding: 1rem 1.5rem;
     display: flex;
@@ -10,43 +16,77 @@ header {
     margin: auto;
 }
 
-nav {
-    margin-right: 3rem;
-}
-
 nav ul {
     display: flex;
     align-items: center;
     gap: 2.5rem;
 }
 
+#link-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
 nav ul li a {
+    /* controle the space between the icon and the text of menu links*/
     display: flex;
     gap: 0.35rem;
 }
 
 #logo {
     font-family: "Squada One", "Roboto", sans-serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 #sign-in {
-    background-color: var(--color-700);
-    padding: 0.75rem 1.25rem;
-    border-radius: 5px;
-    border: none;
     display: flex;
     align-items: center;
+    gap: 0.35rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-700);
+    border-radius: 0.3rem;
+
     font-size: 1rem;
     color: var(--color-100);
-    gap: 0.35rem;
-    transition-property: gap;
+
+    transition-property: gap; /* because of the animation when the page load */
     transition-duration: 0.2s;
 }
 
 #sign-in:hover {
     transition-duration: 0.2s;
     transition-property: gap;
-    gap: 0.5rem;
+    gap: 0.5rem; /* add space between text and icon */
     background-color: var(--color-800);
+}
+
+#menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+/* class add with JS for display it */
+.menu-open {
+    right: 0;
+    transition: 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    #menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 62.4px; /* height of the header */
+        right: -100%; /* hide it on the right */
+        height: calc(100vh - 62.4px); /* height page - height header*/
+        padding: 2rem 4rem;
+        border-left: 1px solid var(--border-color);
+        flex-direction: column; /* switch row to column */
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
 }
