@@ -81,7 +81,7 @@ nav ul li a {
     nav ul {
         position: absolute;
         top: 62.4px; /* height of the header */
-        right: -645.6px; /* width of the menu to hide it on the right */
+        right: -100%; /* hide it on the right */
         height: calc(100vh - 62.4px); /* height page - height header*/
         padding: 2rem 4rem;
         border-left: 1px solid var(--border-color);
