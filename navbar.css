@@ -1,7 +1,7 @@
 header {
     /* fix the header in the top of the page */
-    top: 0;
-    position: sticky;
+    position: fixed;
+    width: 100vw;
 
     border-bottom: 1px solid var(--border-color);
     background-color: white;
@@ -79,9 +79,9 @@ nav ul li a {
     }
 
     nav ul {
-        position: absolute;
+        position: fixed;
         top: 62.4px; /* height of the header */
-        right: -645.6px; /* width of the menu to hide it on the right */
+        right: -100%; /* hide it on the right */
         height: calc(100vh - 62.4px); /* height page - height header*/
         padding: 2rem 4rem;
         border-left: 1px solid var(--border-color);
