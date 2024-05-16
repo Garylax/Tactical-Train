@@ -1,0 +1,52 @@
+header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+#content-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav {
+    margin-right: 3rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+nav ul li a {
+    display: flex;
+    gap: 0.35rem;
+}
+
+#logo {
+    font-family: "Squada One", "Roboto", sans-serif;
+    font-size: 2rem;
+}
+
+#sign-in {
+    background-color: var(--color-700);
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--color-100);
+    gap: 0.35rem;
+    transition-property: gap;
+    transition-duration: 0.2s;
+}
+
+#sign-in:hover {
+    transition-duration: 0.2s;
+    transition-property: gap;
+    gap: 0.5rem;
+    background-color: var(--color-800);
+}
