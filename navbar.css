@@ -29,6 +29,10 @@ nav ul li a {
     gap: 0.35rem;
 }
 
+nav span:hover {
+    text-decoration: underline;
+}
+
 #logo {
     font-family: "Squada One", "Roboto", sans-serif;
     font-size: 1.75rem;
@@ -81,5 +85,13 @@ nav ul li a {
         flex-direction: column; /* switch row to column */
         align-items: flex-start;
         transition: 0.3s ease;
+    }
+
+    #li-sign-in {
+        width: 100%;
+    }
+
+    #sign-in {
+        justify-content: center;
     }
 }
