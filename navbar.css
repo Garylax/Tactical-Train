@@ -16,12 +16,7 @@ header {
     margin: auto;
 }
 
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-}
-
+nav ul,
 #link-container {
     display: flex;
     align-items: center;
@@ -54,13 +49,11 @@ nav span:hover {
     font-size: 1rem;
     color: var(--color-100);
 
-    transition-property: gap; /* because of the animation when the page load */
-    transition-duration: 0.2s;
+    transition: gap 0.2s; /* because of the animation when the page load */
 }
 
 #sign-in:hover {
-    transition-duration: 0.2s;
-    transition-property: gap;
+    transition: gap 0.2s;
     gap: 0.5rem; /* add space between text and icon */
     background-color: var(--color-800);
 }
